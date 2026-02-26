@@ -1,0 +1,110 @@
+.task-container {
+
+  width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+
+}
+
+.top-bar {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.subtitle {
+
+  color: gray;
+  font-size: 14px;
+
+}
+
+.yellow-btn {
+
+  background: #f4c542;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+
+}
+
+.search {
+
+  padding: 6px;
+  margin-left: 10px;
+
+}
+
+.task-table {
+
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+
+}
+
+.task-table th,
+.task-table td {
+
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+
+}
+
+.blue {
+
+  color: #1976d2;
+  font-weight: bold;
+
+}
+
+
+/* dropdown */
+
+.comments-cell {
+
+  position: relative;
+
+}
+
+.dropdown {
+
+  display: inline-block;
+  margin-left: 10px;
+
+}
+
+.dropdown-btn {
+
+  border: none;
+  background: #f4c542;
+  cursor: pointer;
+
+}
+
+.dropdown-content {
+
+  display: none;
+  position: absolute;
+  background: #f4c542;
+  min-width: 80px;
+
+}
+
+.dropdown-content div {
+
+  padding: 6px;
+  cursor: pointer;
+
+}
+
+.dropdown:hover .dropdown-content {
+
+  display: block;
+
+}

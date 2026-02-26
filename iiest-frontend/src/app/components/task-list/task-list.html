@@ -1,0 +1,83 @@
+<div class="task-container">
+
+  <div class="top-bar">
+
+    <div>
+      <h2>Tasks</h2>
+      <div class="subtitle">All Tasks</div>
+    </div>
+
+    <div>
+      <button class="yellow-btn" (click)="openModal()">New Task</button>
+      <button class="yellow-btn" (click)="loadTasks()">Refresh</button>
+      <input class="search" placeholder="Search">
+    </div>
+
+  </div>
+
+  <table class="task-table">
+
+    <thead>
+      <tr>
+        <th></th>
+        <th>Assigned To</th>
+        <th>Status</th>
+        <th>Due Date</th>
+        <th>Priority</th>
+        <th>Comments</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let task of tasks">
+
+        <td><input type="checkbox"></td>
+
+        <td class="blue">{{task.assignedTo}}</td>
+
+        <td>{{task.status}}</td>
+
+        <td>{{task.dueDate | date:'dd/MM/yyyy'}}</td>
+
+        <td>{{task.priority}}</td>
+
+        <td>{{task.description}}</td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+
+
+<!-- MODAL -->
+<div class="modal" *ngIf="showModal">
+
+  <div class="modal-box">
+
+    <h3>New Task</h3>
+
+    <input [(ngModel)]="newTask.assignedTo">
+
+    <input type="date" [(ngModel)]="newTask.dueDate">
+
+    <select [(ngModel)]="newTask.priority">
+      <option>High</option>
+      <option>Normal</option>
+      <option>Low</option>
+    </select>
+
+    <input placeholder="Description" [(ngModel)]="newTask.description">
+
+    <br><br>
+
+    <button class="yellow-btn" (click)="saveTask()">Save</button>
+
+    <button (click)="closeModal()">Cancel</button>
+
+  </div>
+
+</div>
